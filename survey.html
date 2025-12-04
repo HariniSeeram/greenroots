@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GreenRoots – Organic Farming & Plantation (Palakol)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="survey.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="main-header">
+    <div class="logo">GreenRoots</div>
+    <nav class="nav" id="mainNav">
+      <a href="#" data-section="home" class="nav-link active">Home</a>
+      <a href="#" data-section="seeds" class="nav-link">Native Seeds</a>
+      <a href="#" data-section="compost" class="nav-link">Composting</a>
+      <a href="#" data-section="survey" class="nav-link">Survey</a>
+      <a href="#" data-section="suppliers" class="nav-link">Suppliers</a>
+      <a href="#" data-section="contact" class="nav-link">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section active hero">
+    <div class="container hero-content">
+      <div>
+        <h1>Organic Farming & Plantation in Palakol</h1>
+        <p>
+          This website is part of my Community Service Project on
+          <strong>Organic Farming & Plantation</strong> in Palakol Town,
+          West Godavari. The goal is to spread awareness about growing
+          vegetables at home using native seeds and simple composting methods.
+        </p>
+        <ul>
+          <li>Grow safe, chemical-free vegetables at home</li>
+          <li>Use kitchen waste to make natural compost</li>
+          <li>Support local nurseries and farmers</li>
+        </ul>
+        <button id="startTourBtn" class="primary-btn">Start Tour</button>
+      </div>
+      <div class="hero-card">
+        <h2>Project Snapshot</h2>
+        <p><strong>Location:</strong> Palakol Town, West Godavari</p>
+        <p><strong>Duration:</strong> 05/05/2025 – 05/07/2025</p>
+        <p><strong>Focus:</strong> Organic farming, native seeds, composting</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NATIVE SEEDS -->
+  <section id="seeds" class="section">
+    <div class="container">
+      <h2>Native Seeds Suitable for Palakol</h2>
+      <p>Filter seeds based on the type of plant you want to grow.</p>
+
+      <div class="filter-row">
+        <span>Filter by type:</span>
+        <button class="chip active" data-seed-filter="all">All</button>
+        <button class="chip" data-seed-filter="leafy">Leafy</button>
+        <button class="chip" data-seed-filter="fruit">Fruit</button>
+        <button class="chip" data-seed-filter="climber">Climber</button>
+      </div>
+
+      <div class="grid two-cols seed-grid">
+        <div class="card seed-card" data-type="leafy" data-space="small">
+          <h3>Spinach (Thotakura)</h3>
+          <p>Fast-growing leafy vegetable. Good for pots and trays.</p>
+          <p><strong>Type:</strong> Leafy | <strong>Space:</strong> Small</p>
+        </div>
+        <div class="card seed-card" data-type="fruit" data-space="medium">
+          <h3>Tomato (Desi)</h3>
+          <p>Great taste, suitable for medium pots and grow bags.</p>
+          <p><strong>Type:</strong> Fruit | <strong>Space:</strong> Medium</p>
+        </div>
+        <div class="card seed-card" data-type="fruit" data-space="medium">
+          <h3>Brinjal (Nattu Vankaya)</h3>
+          <p>Traditional variety, tolerant to pests.</p>
+          <p><strong>Type:</strong> Fruit | <strong>Space:</strong> Medium</p>
+        </div>
+        <div class="card seed-card" data-type="fruit" data-space="medium">
+          <h3>Okra (Bendakaya)</h3>
+          <p>High yield and very easy to grow.</p>
+          <p><strong>Type:</strong> Fruit | <strong>Space:</strong> Medium</p>
+        </div>
+        <div class="card seed-card" data-type="leafy" data-space="small">
+          <h3>Coriander</h3>
+          <p>Grows well in shallow trays and small pots.</p>
+          <p><strong>Type:</strong> Leafy | <strong>Space:</strong> Small</p>
+        </div>
+        <div class="card seed-card" data-type="leafy" data-space="small">
+          <h3>Fenugreek (Methi)</h3>
+          <p>Ideal for microgreens and quick harvest.</p>
+          <p><strong>Type:</strong> Leafy | <strong>Space:</strong> Small</p>
+        </div>
+        <div class="card seed-card" data-type="climber" data-space="large">
+          <h3>Beans (Country Beans)</h3>
+          <p>Needs support sticks or balcony grill.</p>
+          <p><strong>Type:</strong> Climber | <strong>Space:</strong> Large</p>
+        </div>
+        <div class="card seed-card" data-type="climber" data-space="large">
+          <h3>Bitter Gourd (Kakarakaya)</h3>
+          <p>Climbs on terrace grills or fences.</p>
+          <p><strong>Type:</strong> Climber | <strong>Space:</strong> Large</p>
+        </div>
+      </div>
+
+      <div class="reco-box">
+        <h3>Find seeds based on your space</h3>
+        <label>
+          <input type="radio" name="space" value="small" checked />
+          Only small balcony / window space
+        </label>
+        <label>
+          <input type="radio" name="space" value="medium" />
+          Medium space (2–4 pots)
+        </label>
+        <label>
+          <input type="radio" name="space" value="large" />
+          Large terrace area
+        </label>
+        <p id="spaceReco" class="hint"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPOSTING -->
+  <section id="compost" class="section section-alt">
+    <div class="container">
+      <h2>Simple Kitchen Waste Composting</h2>
+      <p>Tick the steps as you complete them. Watch your compost progress grow!</p>
+
+      <div class="grid two-cols">
+        <div>
+          <h3>Composting Checklist</h3>
+          <ul class="checklist">
+            <li>
+              <label>
+                <input type="checkbox" class="compost-step" />
+                Got a bucket / container with holes
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="compost-step" />
+                Added first layer of dry leaves or paper
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="compost-step" />
+                Added kitchen waste (veg/fruit peels)
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="compost-step" />
+                Sprinkled a handful of soil
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" class="compost-step" />
+                Stirring once a week
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Progress</h3>
+          <div class="progress-bar">
+            <div id="compostProgress" class="progress-fill"></div>
+          </div>
+          <p id="compostStatus" class="hint">Start checking steps to see progress.</p>
+
+          <h3 style="margin-top:20px;">Approximate Time</h3>
+          <input type="range" id="daysRange" min="15" max="45" value="30" />
+          <p id="daysLabel">Around 30 days – Compost will be half ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SURVEY INTERACTIVE -->
+  <section id="survey" class="section">
+    <div class="container">
+      <h2>Household Survey – Quick Self Check</h2>
+      <p>Answer these 5 questions and see your summary.</p>
+
+      <form id="miniSurvey" class="survey-form">
+        <div class="survey-q">
+          <p>1. Do you have space at home for planting?</p>
+          <label><input type="radio" name="q1" value="yes"> Yes</label>
+          <label><input type="radio" name="q1" value="no"> No</label>
+        </div>
+        <div class="survey-q">
+          <p>2. Have you ever grown any plant or vegetable at home?</p>
+          <label><input type="radio" name="q2" value="yes"> Yes</label>
+          <label><input type="radio" name="q2" value="no"> No</label>
+        </div>
+        <div class="survey-q">
+          <p>3. Do you know about composting with kitchen waste?</p>
+          <label><input type="radio" name="q3" value="yes"> Yes</label>
+          <label><input type="radio" name="q3" value="no"> No</label>
+        </div>
+        <div class="survey-q">
+          <p>4. Are you willing to try organic gardening in the next 1 month?</p>
+          <label><input type="radio" name="q4" value="yes"> Yes</label>
+          <label><input type="radio" name="q4" value="no"> No</label>
+        </div>
+        <div class="survey-q">
+          <p>5. Will you attend an awareness program on organic farming?</p>
+          <label><input type="radio" name="q5" value="yes"> Yes</label>
+          <label><input type="radio" name="q5" value="no"> No</label>
+        </div>
+
+        <button type="submit" class="primary-btn small">Show My Summary</button>
+        <p id="surveyResult" class="status-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- LOCAL SUPPLIERS -->
+  <section id="suppliers" class="section section-alt">
+    <div class="container">
+      <h2>Local Suppliers & Nurseries (Palakol)</h2>
+      <p>Filter suppliers based on what you need.</p>
+
+      <div class="filter-row">
+        <span>Show:</span>
+        <button class="chip active" data-supp-filter="all">All</button>
+        <button class="chip" data-supp-filter="seeds">Seeds</button>
+        <button class="chip" data-supp-filter="compost">Compost</button>
+        <button class="chip" data-supp-filter="tools">Tools</button>
+      </div>
+
+      <div class="grid two-cols">
+        <div class="card supplier-card" data-type="seeds compost">
+          <h3>Sri Sai Nursery</h3>
+          <p>Native seeds, flower & vegetable saplings, organic manure.</p>
+          <p><strong>Category:</strong> Seeds, Compost</p>
+        </div>
+        <div class="card supplier-card" data-type="compost tools">
+          <h3>Green Leaf Agro Shop</h3>
+          <p>Grow bags, vermicompost, neem oil & gardening tools.</p>
+          <p><strong>Category:</strong> Compost, Tools</p>
+        </div>
+        <div class="card supplier-card" data-type="seeds">
+          <h3>Local Rythu Bazaar Vendors</h3>
+          <p>Seasonal seedlings supplied by local farmers.</p>
+          <p><strong>Category:</strong> Seeds</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact / Feedback</h2>
+      <p>
+        If you have any questions or want help starting an organic garden,
+        you can use this form to send a message. (Demo only – no backend.)
+      </p>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Name:
+          <input type="text" id="name" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Message:
+          <textarea id="message" rows="4" required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+        <p id="formStatus" class="status-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <script src="survey.js"></script>
+</body>
+</html>

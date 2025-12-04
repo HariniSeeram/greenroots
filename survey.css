@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6fff3;
+  color: #222;
+}
+
+/* HEADER & NAV */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #2f855a;
+  color: #fff;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a.active {
+  border-bottom-color: #c6f6d5;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* LAYOUT */
+
+.section {
+  padding: 40px 16px;
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.section-alt {
+  background: #e9f9e4;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: #22543d;
+}
+
+/* HERO */
+
+.hero {
+  background: #ebfff0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.hero-content > div {
+  flex: 1 1 280px;
+}
+
+.hero ul {
+  padding-left: 18px;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+/* BUTTONS */
+
+.primary-btn {
+  background: #2f855a;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-btn:hover {
+  background: #276749;
+}
+
+.primary-btn.small {
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.two-cols {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* CARDS & LISTS */
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* FILTERS */
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 18px;
+  font-size: 14px;
+}
+
+.chip {
+  border: 1px solid #2f855a;
+  background: #f0fff4;
+  border-radius: 16px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.chip.active {
+  background: #2f855a;
+  color: #fff;
+}
+
+/* SEEDS */
+
+.seed-grid {
+  margin-bottom: 18px;
+}
+
+.reco-box {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #f0fff4;
+  border-radius: 10px;
+  border: 1px solid #c6f6d5;
+}
+
+.reco-box label {
+  display: block;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* COMPOST */
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  border-radius: 999px;
+  background: #c6f6d5;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #2f855a;
+  transition: width 0.3s ease;
+}
+
+#daysRange {
+  width: 100%;
+}
+
+/* SURVEY FORM */
+
+.survey-form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.survey-q p {
+  margin: 0 0 4px;
+}
+
+.survey-q label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 120px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: #2f855a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.contact-form button:hover {
+  background: #276749;
+}
+
+/* TEXT HELPERS */
+
+.hint {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+.status-msg {
+  font-size: 14px;
+  color: #2f855a;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE NAV */
+
+@media (max-width: 720px) {
+  .nav {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: #2f855a;
+    flex-direction: column;
+    padding: 10px 16px;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
