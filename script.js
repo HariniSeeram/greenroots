@@ -200,4 +200,5 @@ if (contactForm) {
       statusMsg.textContent = '';
     }, 4000);
   });
+
 }
